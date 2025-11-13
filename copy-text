@@ -13,7 +13,7 @@
       <textarea id="text1" placeholder="Enter text..." oninput="autoResize(this)" 
         style="width: 100%; background: transparent; border: none; color: #c9d1d9; font-size: 14px; outline: none; resize: none; padding-right: 60px;"></textarea>
       
-      <!-- ✅ Changed positioning of button -->
+      <!-- ✅ Copy button -->
       <button onclick="copyText('text1', this)" 
         style="position: absolute; top: 8px; right: 8px; background-color: #6c757d; color: white; border: none; padding: 6px 12px; cursor: pointer; font-size: 14px; border-radius: 20px; transition: background-color 0.2s ease;">Copy</button>
     </div>
@@ -57,6 +57,17 @@
 
     // Initialize first textarea
     autoResize(document.getElementById("text1"));
+
+    // ✅ Blur textarea when clicking outside
+    document.addEventListener("click", (event) => {
+      const isTextarea = event.target.tagName.toLowerCase() === "textarea";
+      if (!isTextarea) {
+        const active = document.activeElement;
+        if (active && active.tagName.toLowerCase() === "textarea") {
+          active.blur();
+        }
+      }
+    });
   </script>
 </body>
 </html>
