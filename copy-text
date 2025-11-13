@@ -6,7 +6,6 @@
   <title>Text Copy Boxes</title>
 </head>
 <body style="background-color: #0d1117; color: #c9d1d9; font-family: Arial, sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; min-height: 100vh; margin: 0; overflow-y: auto; padding: 20px;">
-  <h1 style="color: #58a6ff; margin-bottom: 20px;">Copy Text Boxes</h1>
 
   <div class="container" style="display: flex; flex-direction: column; gap: 10px; width: 320px; max-width: 100%; margin: 0 auto;">
     <!-- First box (resizable) -->
