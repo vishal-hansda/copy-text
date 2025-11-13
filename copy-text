@@ -6,12 +6,17 @@
   <title>Text Copy Boxes</title>
 </head>
 <body style="background-color: #0d1117; color: #c9d1d9; font-family: Arial, sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; min-height: 100vh; margin: 0; overflow-y: auto; padding: 20px;">
-  
+  <h1 style="color: #58a6ff; margin-bottom: 20px;">Copy Text Boxes</h1>
+
   <div class="container" style="display: flex; flex-direction: column; gap: 10px; width: 320px; max-width: 100%; margin: 0 auto;">
     <!-- First box (resizable) -->
-    <div class="box" style="display: flex; align-items: center; background-color: #161b22; border: 1px solid #30363d; border-radius: 30px; overflow: hidden; padding-right: 1px;">
-      <textarea id="text1" placeholder="Enter text..." oninput="autoResize(this)" style="flex: 1; min-width: 150px; width: 100%; background: transparent; border: none; color: #c9d1d9; padding: 10px; font-size: 14px; outline: none; resize: none;"></textarea>
-      <button onclick="copyText('text1', this)" style="background-color: #6c757d; color: white; border: none; padding: 10px 15px; cursor: pointer; font-size: 14px; border-left: 1px solid #30363d; border-radius: 30px; transition: background-color 0.2s ease;">Copy</button>
+    <div class="box" style="position: relative; background-color: #161b22; border: 1px solid #30363d; border-radius: 30px; overflow: hidden; padding: 10px;">
+      <textarea id="text1" placeholder="Enter text..." oninput="autoResize(this)" 
+        style="width: 100%; background: transparent; border: none; color: #c9d1d9; font-size: 14px; outline: none; resize: none; padding-right: 60px;"></textarea>
+      
+      <!-- ✅ Changed positioning of button -->
+      <button onclick="copyText('text1', this)" 
+        style="position: absolute; top: 8px; right: 8px; background-color: #6c757d; color: white; border: none; padding: 6px 12px; cursor: pointer; font-size: 14px; border-radius: 20px; transition: background-color 0.2s ease;">Copy</button>
     </div>
 
     <!-- Boxes 2 to 10 (fixed height) -->
